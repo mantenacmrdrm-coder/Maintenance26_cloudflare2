@@ -1,9 +1,0 @@
-name = "votre-app-name"
-compatibility_date = "2024-09-23"
-compatibility_flags = ["nodejs_compat"]
-pages_build_output_dir = ".open-next"
-
-[[d1_databases]]
-binding = "DB"
-database_name = "gmao_data"
-database_id = "57947dc3-c3d2-4f53-ab3b-c4616d5e5031"
