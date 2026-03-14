@@ -1,5 +1,15 @@
 import { defineCloudflareConfig } from "@opennextjs/cloudflare";
 
 export default defineCloudflareConfig({
-  // Configuration par défaut, fonctionne pour la plupart des apps Next.js
+  override: {
+    wrapper: "cloudflare-node",
+    converter: "edge",
+    incrementalCache: false,
+    tagCache: "dummy",
+    queue: "dummy",
+  },
+  // Ajouter cette option pour gérer les assets
+  assets: {
+    prefix: "",
+  },
 });
