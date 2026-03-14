@@ -1,14 +1,11 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "maintenance-app",
-  "main": ".open-next/worker.js",
   "compatibility_date": "2024-12-30",
   "compatibility_flags": ["nodejs_compat"],
-  "assets": {
-    "directory": ".open-next/assets",
-    "binding": "ASSETS"
+  "build": {
+    "command": "npm run build",
+    "cwd": "."
   },
-  "vars": {
-    "NODE_ENV": "production"
-  }
+  "main": ".open-next/worker.js"
 }
