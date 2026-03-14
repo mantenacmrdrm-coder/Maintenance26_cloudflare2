@@ -3,7 +3,7 @@
  * @fileOverview An AI agent for diagnosing equipment breakdowns.
  */
 
-import { ai } from '@/ai/genkit';
+//import { ai } from '@/ai/genkit';
 import { z } from 'zod';
 import { getCurativeHistoryForEquipment, getEquipmentDetails } from '@/lib/data';
 import type { CurativeMaintenanceEntry } from '@/lib/types';
