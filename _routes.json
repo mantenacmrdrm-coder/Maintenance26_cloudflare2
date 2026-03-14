@@ -1,5 +1,21 @@
+# Créer le dossier public s'il n'existe pas
+mkdir -p public
+
+# Créer le fichier _routes.json
+cat > public/_routes.json << 'EOF'
 {
   "version": 1,
   "include": ["/*"],
-  "exclude": ["/assets/*"]
+  "exclude": [
+    "/favicon.ico",
+    "/images/*",
+    "/fonts/*",
+    "/static/*",
+    "/*.png",
+    "/*.jpg",
+    "/*.svg",
+    "/*.css",
+    "/*.js"
+  ]
 }
+EOF
