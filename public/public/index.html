@@ -1,0 +1,15 @@
+cat > public/index.html << 'EOF'
+<!DOCTYPE html>
+<html>
+<head><title>Maintenance App</title></head>
+<body>
+  <h1>✅ Cloudflare Pages fonctionne !</h1>
+  <p>Si vous voyez ceci, le déploiement statique marche.</p>
+  <p>Le problème vient du worker Next.js.</p>
+</body>
+</html>
+EOF
+
+git add public/index.html
+git commit -m "test: add fallback index.html"
+git push origin main
