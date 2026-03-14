@@ -1,26 +1,18 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  distDir: '.next', // <--- AJOUTE CETTE LIGNE
-  output: 'standalone',
+  output: 'export',              // ← ✅ Export statique pour Cloudflare Pages
+  trailingSlash: true,           // ← ✅ Important pour les routes statiques
   typescript: {
-    // Permet de déployer même si des erreurs de type persistent dans la logique métier complexe
     ignoreBuildErrors: true,
   },
-
   images: {
+    unoptimized: true,           // ← ✅ Désactiver l'optimisation Next.js (non supportée en static)
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
+      { protocol: 'https', hostname: '**' },
     ],
   },
-  experimental: {
-    serverActions: {
-      bodySizeLimit: '50mb',
-    },
-  },
+  // ❌ Retirer experimental.serverActions pour l'export statique
 };
 
 export default nextConfig;
