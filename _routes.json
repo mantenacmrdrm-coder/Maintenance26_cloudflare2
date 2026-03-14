@@ -1,7 +1,3 @@
-
-
-# Créer le fichier _routes.json
-cat > public/_routes.json << 'EOF'
 {
   "version": 1,
   "include": ["/*"],
@@ -17,4 +13,3 @@ cat > public/_routes.json << 'EOF'
     "/*.js"
   ]
 }
-EOF
