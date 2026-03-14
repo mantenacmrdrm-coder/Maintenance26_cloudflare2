@@ -1,6 +1,4 @@
-mkdir -p src/app/test-log
-cat > src/app/test-log/page.tsx << 'EOF'
-// Force le rendu côté serveur (pas de static)
+
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
