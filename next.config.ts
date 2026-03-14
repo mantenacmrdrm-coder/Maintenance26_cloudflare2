@@ -1,18 +1,21 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export',              // ← ✅ Export statique pour Cloudflare Pages
-  trailingSlash: true,           // ← ✅ Important pour les routes statiques
+  // ❌ NE PAS mettre output: 'standalone' ou 'export' avec OpenNext
   typescript: {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,           // ← ✅ Désactiver l'optimisation Next.js (non supportée en static)
+    unoptimized: true,  // ✅ Recommandé pour Cloudflare Workers
     remotePatterns: [
       { protocol: 'https', hostname: '**' },
     ],
   },
-  // ❌ Retirer experimental.serverActions pour l'export statique
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '50mb',
+    },
+  },
 };
 
 export default nextConfig;

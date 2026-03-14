@@ -1,15 +1,1 @@
-{
-  "version": 1,
-  "include": ["/*"],
-  "exclude": [
-    "/favicon.ico",
-    "/images/*",
-    "/fonts/*",
-    "/static/*",
-    "/*.png",
-    "/*.jpg",
-    "/*.svg",
-    "/*.css",
-    "/*.js"
-  ]
-}
+{"version":1,"include":["/*"],"exclude":[]}
