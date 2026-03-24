@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "maintenance26-cloudflare2",
+  "compatibility_date": "2024-12-30",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": ".open-next/worker.js",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "gmao_data",
+      "database_id": "hOM177FdG7ueTNgHdkH-QHVdqvRaWqYy7uXnv1_T"
+    }
+  ],
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://maintenance26-cloudflare2.pages.dev"
+  }
+}
