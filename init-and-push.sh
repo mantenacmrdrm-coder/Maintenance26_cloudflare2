@@ -16,8 +16,8 @@ if [ -z "$GITHUB_TOKEN" ]; then
 fi
 
 # Configure le remote
-REPO_OWNER="montenacmrdrm-coder"
-REPO_NAME="Maintenance26_cloudflare2-main"
+REPO_OWNER="mantenacmrdrm-coder"
+REPO_NAME="Maintenance26_cloudflare2"
 REMOTE_URL="https://$REPO_OWNER:$GITHUB_TOKEN@github.com/$REPO_OWNER/$REPO_NAME.git"
 
 echo "➡️  Configuration du remote..."
