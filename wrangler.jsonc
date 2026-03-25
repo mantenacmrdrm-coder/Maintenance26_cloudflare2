@@ -1,27 +1,17 @@
 {
-	"$schema": "node_modules/wrangler/config-schema.json",
-	"main": ".open-next/worker.js",
-	"name": "nextn",
-	"compatibility_date": "2026-03-17",
-	"compatibility_flags": [
-		"nodejs_compat",
-		"global_fetch_strictly_public"
-	],
-	"assets": {
-		"directory": ".open-next/assets",
-		"binding": "ASSETS"
-	},
-	"services": [
-		{
-			// Self-reference service binding, the service name must match the worker name
-			// see https://opennext.js.org/cloudflare/caching
-			"binding": "WORKER_SELF_REFERENCE",
-			"service": "nextn"
-		}
-	],
-	"images": {
-		// Enable image optimization
-		// see https://opennext.js.org/cloudflare/howtos/image
-		"binding": "IMAGES"
-	}
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "maintenance26-cloudflare2",
+  "compatibility_date": "2024-12-30",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": ".open-next/worker.js",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "gmao_data",
+      "database_id": "57947dc3-c3d2-4f53-ab3b-c4616d5e5031"
+    }
+  ],
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://maintenance26-cloudflare2.pages.dev"
+  }
 }
