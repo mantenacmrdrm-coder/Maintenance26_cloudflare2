@@ -2,7 +2,6 @@
 import fs from 'fs/promises';
 import path from 'path';
 import os from 'os';
-// ❌ SUPPRIMÉ: import { createClient } from '@libsql/client';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import isoWeek from 'dayjs/plugin/isoWeek';
