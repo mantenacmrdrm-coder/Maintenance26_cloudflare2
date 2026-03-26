@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Vérifie qu'on est dans le bon dossier (./init-and-push.sh)
+# Vérifie qu'on est dans le bon dossier ()
+#  
 if [ ! -d ".git" ]; then
   echo "➡️  Initialisation du dépôt Git..."
   git init
